@@ -1,9 +1,13 @@
 import { ProjectList } from './app/projectList.js';
 
+// eslint-disable-next-line no-undef
+globalThis.DEFAULT_VALUE = 'JERRY';
+
 class App {
   static init() {
     const activeProjectsList = new ProjectList('active');
     const finishedProjectsList = new ProjectList('finished');
+
     activeProjectsList.setSwitchHandlerFunction(
       finishedProjectsList.addProject.bind(finishedProjectsList)
     );
@@ -20,6 +24,7 @@ class App {
 
   static startAnalytics() {
     const analyticsScript = document.createElement('script');
+
     analyticsScript.src = 'assets/scripts/util/analytics.js';
     analyticsScript.defer = true;
     document.head.append(analyticsScript);

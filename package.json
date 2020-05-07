@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "author": "Jerry Doran",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   }
 }
